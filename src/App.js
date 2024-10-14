@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Tabs from "./Tabs";
+import TabsContent from "./TabsContent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Tabs</h1>
+      <Tabs defaultActiveTab={1}>
+        <TabsContent label="Tab 1">
+          <p>Content for Tab 1</p>
+        </TabsContent>
+        <TabsContent label="Tab 2">
+          <p>Content for Tab 2</p>
+        </TabsContent>
+        <TabsContent label="Tab 3" disabled>
+          <p>Content for Tab 3</p>
+        </TabsContent>
+        <TabsContent label="Tab 4">
+          <p>Content for Tab 4</p>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }
